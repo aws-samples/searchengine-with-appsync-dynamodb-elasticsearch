@@ -1,0 +1,108 @@
+type Event {
+	pk: ID!
+	name: String
+	where: String
+	when: String
+	description: String
+}
+
+type EventConnection {
+	items: [Event]
+	nextToken: String
+}
+
+input FieldInput {
+	field: String!
+	value: String!
+}
+
+type Mutation {
+	# Create a single event.
+	createEvent(
+		name: String!,
+		when: String!,
+		where: String!,
+		description: String!
+	): Event
+}
+
+type Query {
+	search(search: SearchInput!): [Event]
+}
+
+type SearchES @aws_iam {
+	results: [Event]
+	totalCount: Int
+}
+
+input SearchInput {
+	term: String!
+}
+
+input TableBooleanFilterInput {
+	ne: Boolean
+	eq: Boolean
+}
+
+input TableEventFilterInput {
+	pk: TableIDFilterInput
+	name: TableStringFilterInput
+	where: TableStringFilterInput
+	when: TableStringFilterInput
+	description: TableStringFilterInput
+}
+
+input TableFloatFilterInput {
+	ne: Float
+	eq: Float
+	le: Float
+	lt: Float
+	ge: Float
+	gt: Float
+	contains: Float
+	notContains: Float
+	between: [Float]
+}
+
+input TableIDFilterInput {
+	ne: ID
+	eq: ID
+	le: ID
+	lt: ID
+	ge: ID
+	gt: ID
+	contains: ID
+	notContains: ID
+	between: [ID]
+	beginsWith: ID
+}
+
+input TableIntFilterInput {
+	ne: Int
+	eq: Int
+	le: Int
+	lt: Int
+	ge: Int
+	gt: Int
+	contains: Int
+	notContains: Int
+	between: [Int]
+}
+
+input TableStringFilterInput {
+	ne: String
+	eq: String
+	le: String
+	lt: String
+	ge: String
+	gt: String
+	contains: String
+	notContains: String
+	between: [String]
+	beginsWith: String
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+}
