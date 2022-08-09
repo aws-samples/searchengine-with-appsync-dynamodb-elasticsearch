@@ -137,7 +137,7 @@ export class SearchEngineSampleStack extends cdk.Stack {
 
     //This function and subsequent grants and event sources will create ES documents from Dynamo actions
     const ddbToEsFunction = new lambda.Function(this, 'DdbToEsFunction', {
-      runtime: lambda.Runtime.NODEJS_12_X,
+      runtime: lambda.Runtime.NODEJS_16_X,
       functionName: 'searchDynamoToElasticsearchProcessor',
       handler: 'index.default',
       code: lambda.Code.fromAsset('./lib/ddb-to-es-lambda/dist'),
