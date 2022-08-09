@@ -1,8 +1,8 @@
 {
-  "name": "apg-appsync-ddb-es-search",
+  "name": "searchengine-sample",
   "version": "0.1.0",
   "bin": {
-    "apg-appsync-ddb-es-search": "bin/apg-appsync-ddb-es-search.js"
+    "searchengine-sample": "bin/searchengine-sample.js"
   },
   "scripts": {
     "build": "tsc && cd lib/ddb-to-es-lambda && npm run build",

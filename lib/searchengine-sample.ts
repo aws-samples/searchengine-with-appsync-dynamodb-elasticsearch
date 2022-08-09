@@ -10,7 +10,7 @@ import { ElasticsearchDataSource } from './helper-classes';
 import * as fs from "fs";
 import {CfnOutput} from "@aws-cdk/core";
 
-export class ApgAppsyncDdbEsSearchStack extends cdk.Stack {
+export class SearchEngineSampleStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
