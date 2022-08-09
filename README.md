@@ -8,6 +8,17 @@ This pattern describes how to build a GraphQL API that provides a high speed, sc
 -   Using ElasticSearch to search search
 -   Using AppSync to provide an API interact with the product. 
 
+Instructions 
+--------------
+1. Review Prerequisites below
+2. Clone this repository
+3. Navigate to lib/ddb-to-es-lambda
+4. Execute `npm i` to install dependencies
+5. Execute `tsc` to transpile typescript
+6. Navigate to top of project 
+7. Execute `npm i` to install dependencies
+8. Execute `cdk deploy` to deploy stack
+
 Prerequisites and limitations
 -----------------------------
 
@@ -17,9 +28,10 @@ Prerequisites 
 Users will need to have the following items to deploy the example pattern:
 
 -   Access to an AWS with permissions for the related services (See Architecture)
--   Access to an AWS account that has been bootstrapped with a CDK version equal or greater than 1.96.0
+-   Access to an AWS account that has been bootstrapped with a CDK version equal or greater than 1.167.0
 -   Access to an AWS account with an internet gateway attached
--   Access to an AWS account
+-   Local development environment with NodeJS 16 and Typescript installed
+
 
 Limitations 
 ------------
@@ -31,7 +43,7 @@ This example is provided with the following limitations.
 Product versions
 ----------------
 
-Lambdas for the example are created using the `NODEJS_12_X runtime`
+Lambdas for the example are created using the `NODEJS_16_X runtime`
 
 The ElasticSearch version for the example is set to 7.9
 
@@ -62,7 +74,7 @@ This stack will create the following resource associations:
 Target architecture 
 --------------------
 
-![](https://1a9zxhkqsj.execute-api.us-west-2.amazonaws.com/v1/contents/1937f946-4239-4e74-addd-1a47372d2f3c/images/3d254c61-0286-4fd3-8c46-a7d1a196d83d.png)
+![](https://github.com/aws-samples/searchengine-with-appsync-dynamodb-elasticsearch/blob/main/searchengine-sample.png?raw=true)
 
 Automation and scale
 --------------------
