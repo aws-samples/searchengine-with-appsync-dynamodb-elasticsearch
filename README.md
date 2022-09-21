@@ -1,7 +1,7 @@
 Summary
 -------
 
-This pattern describes how to build a GraphQL API that provides a high speed, scalable, and resilient search engine functionality. The technologies utilized in this pattern are Amazon DynamoDB, AWS AppSync, AWS Lambda, and Amazon ElasticSearch FService. The high level architecture of this pattern is based on the following:
+This pattern describes how to build a GraphQL API that provides a high speed, scalable, and resilient search engine functionality. The technologies utilized in this pattern are Amazon DynamoDB, AWS AppSync, AWS Lambda, and Amazon ElasticSearch Service. The high level architecture of this pattern is based on the following:
 
 -   Using DynamoDB for state and change control
 -   Using Lambda for data and event processing, 
